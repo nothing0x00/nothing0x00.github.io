@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>nothing0x00 - nothing0x00</title>
+        <title>Walkthrough: Nightfall CTF</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="nothing0x00 Atom Feed" />
 
@@ -23,19 +23,24 @@
                 </nav>
 <div id="submenu">
                     <ul>
-                            <li><a href="/category/ctf.html">CTF</a></li>
+                            <li class="active"><a href="/category/ctf.html">CTF</a></li>
                             <li><a href="/category/introduction.html">Introduction</a></li>
                     </ul>
                 <div>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/nightfall.html" rel="bookmark"
+           title="Permalink to Walkthrough: Nightfall CTF">Walkthrough: Nightfall CTF</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/nightfall.html">Walkthrough: Nightfall CTF</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <span>Mon 17 February 2020</span>
 <span>| tags: <a href="/tag/ctf.html">#CTF</a></span>
-</footer><!-- /.post-info --><p>Nightfall is the second machine in a series of three (Dusk, Nightfall, Sunrise) that we will be walking through here.</p>
+</footer><!-- /.post-info -->      <p>Nightfall is the second machine in a series of three (Dusk, Nightfall, Sunrise) that we will be walking through here.</p>
 <p>So, without further adieu, let's begin...</p>
 <p>The initial enumeration of the system shows that a number of ports are open, including ports 21, 22, 80, 139, 445 and 3306.</p>
 <p><img alt="initial_nmap" src="/images/nightfall/initial_nmap.png"></p>
@@ -65,46 +70,11 @@
 <p>Then I copied the root entry to a file called shadow on the attacking machine, and the root entry in the /etc/passwd file to a passwd file on the attacking machine. Using the unshadow command from the john password cracking suite I combined these into a crackable password hash and started john. Using this process I was able to access the root password; miguel2.</p>
 <p><img alt="john_process" src="/images/nightfall/john_process.png"></p>
 <p>After extracting the password I used it to su to root, then grabbed the flag.</p>
-<p><img alt="r00ted" src="/images/nightfall/r00ted.png"></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
+<p><img alt="r00ted" src="/images/nightfall/r00ted.png"></p>
+    </div><!-- /.entry-content -->
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/dusk.html" rel="bookmark"
-                           title="Permalink to Walkthrough: Dusk CTF">Walkthrough: Dusk CTF</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Mon 10 February 2020</span>
-<span>| tags: <a href="/tag/ctf.html">#CTF</a></span>
-</footer><!-- /.post-info -->                <p>Walkthrough for Dusk CTF</p>
-                <a class="readmore" href="/dusk.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/introduction.html" rel="bookmark"
-                           title="Permalink to Welcome!">Welcome!</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Mon 10 February 2020</span>
-<span>| tags: <a href="/tag/intro.html">#intro</a></span>
-</footer><!-- /.post-info -->                <p>Welcome!</p>
-                <a class="readmore" href="/introduction.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="social">
                         <h2>social</h2>
